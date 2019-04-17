@@ -7,7 +7,7 @@ tags: []
 
 ## 习题
 
-__2.2.1 __证明加法是可结合的，对任意三个自然数 $a、b、c$，有 $(a + b) + c = a + (b + c)$成立。
+**2.2.1**证明加法是可结合的，对任意三个自然数 $a、b、c$，有 $(a + b) + c = a + (b + c)$成立。
 
 __证明：__
 
@@ -15,9 +15,9 @@ __证明：__
 
 ​	现假设 $(a + b) + c = a + (b + c)$，现讨论$c++$。
 
-​	由__引理2.3.3__，可得 $ (a + b) + c++ = ((a + b) + c)++ $
+​	由**引理2.3.3**，可得 $ (a + b) + c++ = ((a + b) + c)++ $
 
-​	由__引理2.2.3__，可得 $a + (b + (c++)) = a + ((b + c)++) = (a + (b + c))++$
+​	由**引理2.2.3**，可得 $a + (b + (c++)) = a + ((b + c)++) = (a + (b + c))++$
 
 ​	由本题假设 $(a + b) + c = a + (b + c )$
 
@@ -27,7 +27,7 @@ __证明：__
 
 
 
-__2.2.2 __ 证明令 $a$ 为一个正自然数，哪么恰存在一个一个自然数 $b$ 使得 $b++ = a$。
+**2.2.2** 证明令 $a$ 为一个正自然数，哪么恰存在一个一个自然数 $b$ 使得 $b++ = a$。
 
 __证明：__
 
@@ -39,7 +39,7 @@ __证明：__
 
 ​	接下来假设存在不同的自然数$b、 c$，使得$b++ = a$且$c++ = a$。
 
-​	由__公理 2.4 __可得 $b = c$。与命题矛盾，所以得证。
+​	由**公理 2.4**可得 $b = c$。与命题矛盾，所以得证。
 
 
 
@@ -56,7 +56,7 @@ __证明：__
 
 1. 令自然数 $m = 0$，可得 $a + m = a$，所以 $a \geqslant a$。
 
-2. $ \because a \geqslant b, b \geqslant c, \therefore \exist m, n, \in \mathbb{N}, a  + m = b, b + n = c$
+2. $ \because a \geqslant b, b \geqslant c, \therefore \exists m, n, \in \mathbb{N}, a  + m = b, b + n = c$
 
    $c = b + n = a + m + n, l := m + n, c = a + l$
 
@@ -96,11 +96,11 @@ __证明：__
 
    又$\because n \in \mathbb{N}, \therefore n++ \neq 0, \therefore a + (n++) \neq b, \therefore a \leqslant b$ 得证。
 
-6. 先证 $a < b \to \exist d \in \mathbb{N}^+, b = a + d$
+6. 先证 $a < b \to \exists d \in \mathbb{N}^+, b = a + d$
 
    由$a < b$ 的定义，显然可得。
 
-   再证 $\exist d \in \mathbb{N}^+, b = a + d \to a < b$
+   再证 $\exists d \in \mathbb{N}^+, b = a + d \to a < b$
 
    $ b = a + d，d \in \mathbb{N}^+, \therefore b \neq a \therefore a < b$。得证。
 
@@ -128,7 +128,7 @@ __证明：__
 
 只要证 $S(m)$ 为真时，$ P(m)$ 为真即可。
 
-$(m \geqslant m_0) \Leftrightarrow (\exist n\in \mathbb{N}, m = m_0 + n)$
+$(m \geqslant m_0) \Leftrightarrow (\exists n\in \mathbb{N}, m = m_0 + n)$
 
 记 $Q'(n) := Q(m_0 + n) = Q(m)$，则$ Q'(0) = Q(m_0)$为空，为真。
 

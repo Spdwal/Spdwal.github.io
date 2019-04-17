@@ -88,3 +88,13 @@ exclude:
   - package.json
   - spec
   - tmp
+
+kramdown:
+  input: GFM
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+  syntax_highlighter: rouge
+
+
