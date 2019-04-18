@@ -178,3 +178,89 @@ $\because P(m) \therefore P(b++) \therefore P(b)$成立，
 
 $\therefore Q(a++)$成立，由数学归纳法得证$P(m)$对满足 $m \leqslant n$ 的自然数 $ m​$ 均为真。
 
+**2.3.1** 证明乘法是可交换的：令 $m$ 和 $n$ 表示任意两个自然数，那么有 $m \times n = n \times m$。
+
+**证明：**
+
+首先证明 $n, 0, n \times 0 = 0$。
+
+当 $n = 0$时，$0 \times 0 = 0$，显然成立。
+
+设 $n * 0 = 0$，则 $(n++) \times 0 = n \times 0 + 0 = 0 + 0 =0$。成立。
+
+再证 $m \times (n++) = (n \times m) + m$
+
+当 $m = 0$ 时，$m \times (n++) = 0 \times (n++) = 0$。
+
+令 $m \times (n++) = m \times n + m$。
+
+$(m++) \times (n++) = (m) \times (n++) + (n++) = m \times n + m + (n++) = m \times n + (m++) + n = (m++) \times n + (m++)$ 得证。
+
+再证 $m \times n = n \times m$ 。
+
+首先已经证明 $m \times 0 = 0 = 0 \times m$。
+
+令 $m \times n = n \times m$，接下来需证明 $(m++) \times n = n \times (m++)$。
+
+由前证可得 $(m++) \times n = m \times n + n, n \times(m++) = n \times m + n$。
+
+由之前 $m \times n = n \times m$，所以 $m \times n + n = n \times m + n$，所以成立，得证。
+
+**2.3.2** 设 $n, m$ 为自然数，那么 $n \times m = 0$ 当且仅当 $n,m$ 中至少有一个为0，特别的，如果  $n, m$ 都是正的，那么 $nm$ 也是正的。
+
+**证明：**
+
+先证明命题二：
+
+ 令 $m = 1$，$n$ 为正数，  $mn = n$，显然为正数。
+
+假设 $mn$ 为正数。
+
+$(m++) \times n = mn + n$，$mn$ 为正数，$n$ 为正数，$\therefore mn + n$ 为正数。所以此命题得证。
+
+再证命题一：
+
+当 $m,n$ 都为正数，那么$mn \neq 0$，所以，$m,n$ 中必须要至少有一个为0。得证。
+
+**2.3.3** 证明乘法是可结合的，对任意自然数，$(a \times b ) \times c = a \times (b \times c)$ 均成立。
+
+**证明：**
+
+令 $c = 0$， 可得 $(a \times b) \times c = (a \times b) \times 0 = 0$
+
+$a \times (b \times c) =.a \times 0 = 0$ 相等。
+
+设 $(a \times b) \times c = a \times (b \times c)$ ，需证明  $(a \times b) \times (c++) = a \times (b \times (c++))$
+
+$(a \times b) \times (c++) = (a \times b) \times c + (a \times b)$
+
+$a \times (b \times (c++)) = a \times (b \times c + b) = a \times (b \times c) + (a \times b)$ 相等，所以得证。
+
+**2.3.4** 证明等式 $(a + b)^2 = a^2 + 2ab + b^2$ 对任意自然数都成立。
+
+**证明：**
+
+当$a = 0$ 时，$(0 + b)^2 = b ^2 = 0^2 + 2 \times 0 \times b + b^2$
+
+令 $(a + b)^2 = a^2 + 2ab + b^2$，证明 $((a++) + b)^2 = (a++)^2 + 2 \times (a++) \times b + b^2$
+
+$((a++) + b)^2 = ((a++) + b) \times ((a++) + b) = ((a + b) ++) \times ((a + b)++) = (a + b) \times ((a + b)++) + ((a + b )++)$
+
+$= (a + b) \times (a + b) + (a + b) + ((a + b) ++) = a^2 + 2ab+b^2 + 2a + 2b + 1 = (a++)^2 + 2\times (a++)\times b + b^2$
+
+得证。
+
+**2.3.5** 证明欧几里得算法：设 $n$ 是一个自然数，$q$ 表示一个正自然数，那么存在自然数 $m$ 和 $r$ 使得 $0 \leqslant r < q$ ，并且 $n = mq + r$。
+
+**证明：**
+
+当 $n = 0$ 时，$0 = mq + r$，当 $r = 0, m= 0$ 时成立。
+
+令 $n = mq + r$ 成立，  当 $r++ \neq q$ 时，$n++ = mq +(r++)$， $r++ \in \mathbb{N}, 0 \leqslant r++ < q$，成立。
+
+当 $r++ = q$ 时， $n++ = mq + q = (m++)q $，此时 $m = m++, r = 0$，成立，因此得证。
+
+
+
+
+
