@@ -194,7 +194,15 @@ $\therefore Q(a++)$成立，由数学归纳法得证$P(m)$对满足 $m \leqslant
 
 令 $m \times (n++) = m \times n + m$。
 
-$(m++) \times (n++) = (m) \times (n++) + (n++) = m \times n + m + (n++) = m \times n + (m++) + n = (m++) \times n + (m++)$ 得证。
+$(m++) \times (n++)$ 
+
+$= (m) \times (n++) + (n++)$ 
+
+$= m \times n + m + (n++)$ 
+
+$= m \times n + (m++) + n$ 
+
+$= (m++) \times n + (m++)$ 得证。
 
 再证 $m \times n = n \times m$ 。
 
@@ -244,9 +252,19 @@ $a \times (b \times (c++)) = a \times (b \times c + b) = a \times (b \times c) +
 
 令 $(a + b)^2 = a^2 + 2ab + b^2$，证明 $((a++) + b)^2 = (a++)^2 + 2 \times (a++) \times b + b^2$
 
-$((a++) + b)^2 = ((a++) + b) \times ((a++) + b) = ((a + b) ++) \times ((a + b)++) = (a + b) \times ((a + b)++) + ((a + b )++)$
+$((a++) + b)^2$ 
 
-$= (a + b) \times (a + b) + (a + b) + ((a + b) ++) = a^2 + 2ab+b^2 + 2a + 2b + 1 = (a++)^2 + 2\times (a++)\times b + b^2$
+$= ((a++) + b) \times ((a++) + b)$
+
+ $= ((a + b) ++) \times ((a + b)++)$ 
+
+$= (a + b) \times ((a + b)++) + ((a + b )++)$
+
+$= (a + b) \times (a + b) + (a + b) + ((a + b) ++)$ 
+
+$= a^2 + 2ab+b^2 + 2a + 2b + 1$ 
+
+$= (a++)^2 + 2\times (a++)\times b + b^2$
 
 得证。
 
