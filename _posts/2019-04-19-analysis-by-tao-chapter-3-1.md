@@ -112,7 +112,7 @@ $\therefore A \subseteq B \Rightarrow A \cup B = B$  。
 
 再证命题1蕴含命题3:
 
-$A \subseteq B \Rightarrow \forall x \in A, x \in B \w-edge x \in A \Rightarrow x \in A$
+$A \subseteq B \Rightarrow \forall x \in A, x \in B \wedge x \in A \Rightarrow x \in A$
 
 $\therefore A \subseteq B \Rightarrow A \cap B = A$
 
@@ -161,12 +161,12 @@ $3 \Rightarrow 1 \Rightarrow 2$ 得证。
 
 6. 先证明 $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
 
-   $\forall x \in A \cap (B \cup C) \Rightarrow x \in A \w-edge x \in (B \cup C)$
+   $\forall x \in A \cap (B \cup C) \Rightarrow x \in A \wedge x \in (B \cup C)$
 
    可分成以下两种情况：
 
-   1. $x \in A \w-edge x \in B \Rightarrow x \in (A \cap B) \Rightarrow x \in (A \cap B) \cup (A \cap C)$
-   2. $x \in A \w-edge x \notin B \w-edge x \in c \Rightarrow x \in (A \cap C) \Rightarrow x \in (A \cap B) \cup (A \cap C)$
+   1. $x \in A \wedge x \in B \Rightarrow x \in (A \cap B) \Rightarrow x \in (A \cap B) \cup (A \cap C)$
+   2. $x \in A \wedge x \notin B \wedge x \in c \Rightarrow x \in (A \cap C) \Rightarrow x \in (A \cap B) \cup (A \cap C)$
 
    $\therefore \forall x \in A \cap (B \cup C) \Rightarrow x \in (A \cap B) \cup (A \cap C)$
 
@@ -186,8 +186,8 @@ $3 \Rightarrow 1 \Rightarrow 2$ 得证。
 
    也分为两种情况：
 
-   1. $x \in A \Rightarrow  x \in (A \cap B) \w-edge x \in (A \cap C) \Rightarrow x \in (A \cap B) \cup (A \cap C)$
-   2. $x \in (B \cap C) \Rightarrow x \in B \w-edge x \in C \Rightarrow x \in (A \cup B) \w-edge x \in (A \cup C) \Rightarrow x \in (A \cup B) \cap (A \cup C)$
+   1. $x \in A \Rightarrow  x \in (A \cap B) \wedge x \in (A \cap C) \Rightarrow x \in (A \cap B) \cup (A \cap C)$
+   2. $x \in (B \cap C) \Rightarrow x \in B \wedge x \in C \Rightarrow x \in (A \cup B) \wedge x \in (A \cup C) \Rightarrow x \in (A \cup B) \cap (A \cup C)$
 
    $\therefore \forall x \in A \cup (B \cap C), x \in (A \cup B) \cap (A \cup C)$
 
@@ -195,14 +195,14 @@ $3 \Rightarrow 1 \Rightarrow 2$ 得证。
 
    $x \in (A \cup B) \cap (A \cup C)$  也分成两种情况讨论
 
-   1. $x \in A \w-edge x \notin (B \cup C)  \Rightarrow x \in A \cup (B \cap C)$
-   2. $x \notin A \w-edge x \in (B \cap C) \Rightarrow x \in A \cup (B \cap C)$
+   1. $x \in A \wedge x \notin (B \cup C)  \Rightarrow x \in A \cup (B \cap C)$
+   2. $x \notin A \wedge x \in (B \cap C) \Rightarrow x \in A \cup (B \cap C)$
 
    $\therefore \forall x \in (A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)$
 
    $\therefore A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ 得证。
 
-7. $\forall x \in (X \setminus A) \Rightarrow \forall x \in X \w-edge x \notin A$
+7. $\forall x \in (X \setminus A) \Rightarrow \forall x \in X \wedge x \notin A$
 
    $A \cup (X \setminus A) \Rightarrow \forall x \in A \vee \forall x \in (X \setminus A) $ 又 $\because A \subseteq X \Rightarrow \in X$
 
@@ -214,9 +214,9 @@ $3 \Rightarrow 1 \Rightarrow 2$ 得证。
 
    $\therefore A \cup (X \setminus A) = X$ 
 
-   $A \cap (X \setminus A) \Rightarrow \forall x \in A \w-edge (x \in X \w-edge x \notin A) \Rightarrow (x \in A \w-edge x \notin A) \w-edge x \in X$
+   $A \cap (X \setminus A) \Rightarrow \forall x \in A \wedge (x \in X \wedge x \notin A) \Rightarrow (x \in A \wedge x \notin A) \wedge x \in X$
 
-   $x \in \phi \w-edge x \in X \Rightarrow x \in \phi$
+   $x \in \phi \wedge x \in X \Rightarrow x \in \phi$
 
    $ A \cap (B \cup C) \subseteq \phi$
 
@@ -228,13 +228,13 @@ $3 \Rightarrow 1 \Rightarrow 2$ 得证。
 
    $\forall x \in X \setminus (A \cup B) \Rightarrow x \notin (A \cup B)$
 
-   $x \in X \setminus A \w-edge x \in X \setminus B$
+   $x \in X \setminus A \wedge x \in X \setminus B$
 
    $x \in (X \setminus A) \cap (x \setminus B)$
 
    $X \setminus (A \cup B) \subseteq (X \setminus A) \cup (X \setminus B)$
 
-   $\forall x \in (X \setminus A) \cap (X \setminus B) \Rightarrow x \in X \w-edge x \notin A \w-edge x \notin B$
+   $\forall x \in (X \setminus A) \cap (X \setminus B) \Rightarrow x \in X \wedge x \notin A \wedge x \notin B$
 
    $x \in X \setminus (A \cup B)$
 
@@ -244,7 +244,7 @@ $3 \Rightarrow 1 \Rightarrow 2$ 得证。
 
    再证 $X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)$
 
-   $X \setminus (A \cap B) \Rightarrow \forall x \in X \w-edge x \notin (A \cap B)$
+   $X \setminus (A \cap B) \Rightarrow \forall x \in X \wedge x \notin (A \cap B)$
 
    存在以下三种情况：
    
@@ -270,17 +270,17 @@ $3 \Rightarrow 1 \Rightarrow 2$ 得证。
 
 先证 $A \cap B \subseteq A$
 
-$\forall x \in A \cap B \Rightarrow x \in A \w-edge x \in B \Rightarrow x \in A \Rightarrow A \cap B \subseteq A$
+$\forall x \in A \cap B \Rightarrow x \in A \wedge x \in B \Rightarrow x \in A \Rightarrow A \cap B \subseteq A$
 
 同理可证 $A \cap B \subseteq B$
 
-$C \subseteq A \w-edge C \subseteq B \Rightarrow \forall x \in C, x \in A \w-edge x \in B \Rightarrow x \in A \cap B$
+$C \subseteq A \wedge C \subseteq B \Rightarrow \forall x \in C, x \in A \wedge x \in B \Rightarrow x \in A \cap B$
 
 $\therefore C \subseteq  A \cap B$
 
-$C \subseteq A \cap B \Rightarrow \forall x \in C, x \in A \w-edge x \in B \Rightarrow C \subseteq A \w-edge C \subseteq B$ 
+$C \subseteq A \cap B \Rightarrow \forall x \in C, x \in A \wedge x \in B \Rightarrow C \subseteq A \wedge C \subseteq B$ 
 
-$\therefore C \subseteq A \w-edge C \subseteq B \Leftrightarrow C \subseteq A \cap B$ 得证。
+$\therefore C \subseteq A \wedge C \subseteq B \Leftrightarrow C \subseteq A \cap B$ 得证。
 
 余下同理。
 
@@ -288,9 +288,9 @@ $\therefore C \subseteq A \w-edge C \subseteq B \Leftrightarrow C \subseteq A \c
 
 **证明：**
 
-$\forall x \in A \cup B \w-edge x \in A \because A \subseteq A \cup B \therefore x \in A \therefore A \cap (A \cup B) \subseteq A$
+$\forall x \in A \cup B \wedge x \in A \because A \subseteq A \cup B \therefore x \in A \therefore A \cap (A \cup B) \subseteq A$
 
-$\forall x \in A, x \in A \w-edge x \in (A \cup B) \therefore x \in A \cap (A \cup B)$
+$\forall x \in A, x \in A \wedge x \in (A \cup B) \therefore x \in A \cap (A \cup B)$
 
 $\therefore A \cap (A \cup B) = A$
 
@@ -304,7 +304,7 @@ $\forall x \in A , \because A \cup B \ X \therefore x \in A, \because A \cap B =
 
 $\therefore A \subseteq X \setminus B$
 
-$\forall x \in X \setminus B \Rightarrow x \in X \w-edge x \notin B$
+$\forall x \in X \setminus B \Rightarrow x \in X \wedge x \notin B$
 
 $\because A \cup B = X, A \cap B = \phi \Rightarrow x \in A$
 
@@ -320,13 +320,13 @@ $X \setminus B \subseteq A \Rightarrow A = X \setminus B$  得证。
 
 假设$A \setminus B$ 与 $A \cap B$ 相交
 
-那么$\exist x \in A \setminus B, x \in A \cap B, \therefore x \in B \w-edge x \notin B$ 矛盾，所以这两个集合不相交。同理可证其他集合之间的关系。
+那么$\exist x \in A \setminus B, x \in A \cap B, \therefore x \in B \wedge x \notin B$ 矛盾，所以这两个集合不相交。同理可证其他集合之间的关系。
 
 令$ X = A \cup B \therefore \forall x \in X$ 可化为以下三种之一
 
-1. $x \in A \w-edge x \notin B \Rightarrow x \in A \setminus B$
-2. $x \in B \w-edge x \notin A \Rightarrow x \in B \setminus A$
-3. $x \in A \w-edge x \in B \Rightarrow x \in A \cap B$
+1. $x \in A \wedge x \notin B \Rightarrow x \in A \setminus B$
+2. $x \in B \wedge x \notin A \Rightarrow x \in B \setminus A$
+3. $x \in A \wedge x \in B \Rightarrow x \in A \cap B$
 
 得证。
 
@@ -340,7 +340,7 @@ $z \in \{y: P(x, y), x \in A \} \Leftrightarrow x \in A, P(x, z)\ is \ true$
 
 令 $Q(y) := P(x, y),  x = y$
 
-$y \in \{x \in A: Q(x) \ is \ true \} \Leftrightarrow y \in A \w-edge Q(y) \ is \ true$ 得证。
+$y \in \{x \in A: Q(x) \ is \ true \} \Leftrightarrow y \in A \wedge Q(y) \ is \ true$ 得证。
 
 
 
