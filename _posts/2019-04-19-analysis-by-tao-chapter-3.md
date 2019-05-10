@@ -416,6 +416,177 @@ $y \in \{x: \forall x P(x) \ is \ true \}$ 即是用公理推出万有集合。
 
 
 
+## 函数
+
+**3.3.1** 证明定义3.3.7中"相等"的定义是自反的、对称的、和可传递的。同时证明替换性质：如果 $f$，$\tilde{f}: X \rightarrow Y$ 和 $g$，$\tilde{g} : Y \rightarrow Z$ 是满足 $f = \tilde{f}$ 和 $g = \tilde{g}$ 的函数，那么 $g \circ f = \tilde{g} \circ \tilde{f}$
+
+**证明：**
+
+自反性：
+
+当$x \in X, f(x) = f(x) \wedge f: X \rightarrow Y, f: X \rightarrow Y$ 
+
+显然也相等。
+
+对称性：
+
+$\forall x \in X, f(x) = g(x) \Rightarrow \forall x \in X, g(x) = f(x)$
+
+$\therefore g = f$
+
+可传递性：
+
+$ \forall x \in X, f(x) = g(x), g(x) = h(x) \therefore f(x) = h(x)$得证。
+
+替换性质：
+
+$\because f(x) = \tilde{f}(x),g(x) = \tilde{g}(x) $
+
+$\therefore g(f(x)) = g(\tilde{f}(x)),\therefore g(f(x)) = \tilde{g}(\tilde{f}(x))$ 得证。
+
+
+
+**3.3.2** 设 $f: X \rightarrow Y$ 和 $g: Y \rightarrow Z$ 是函数。证明：如果 $f$ 和 $g$ 都是单射，那么 $g \circ f$ 也是单射；类似的，证明：如果 $f$ 和 $g$ 都是满射，那么 $g \circ f$ 也是满射。
+
+**证明：**
+
+先证单射：
+
+当 $x_1, x_2 \in X, x_1 \neq x_2, f(x_1), f(x_2) \in Y,f(x_1) \neq f(x_2) \therefore g(f(x_1)) \neq g(f(x_2))$
+
+所以 $g \circ f$ 也是单射的。
+
+再证满射：
+
+$\because f, g$ 都是满射的。 $\therefore \forall z \in Z$ 则 $z$ 通过 $g$ 对 $Y$ 中某一个元素起作用
+
+又 $f$ 是满射的，所以 $\forall y \in Y$ $y$ 通过 $f$ 对 $X$ 中某一个元素起作用
+
+$\therefore \forall z \in Z$ 都可以通过 $f \circ g$ 对 $X$ 上某个元素起作用。所以 $f \circ g$ 是满射的。
+
+
+
+**3.3.3** 何时空函数是单射？满射？双射？
+
+**解：**
+
+空函数都是单射 
+如果值域是空，则为满射 
+如果值域为空，则为双射
+
+
+
+**3.3.4** 在这一节中我们给出一些有关复合的消去律。设 $ f: X \rightarrow Y、\tilde{f}(x): X \rightarrow Y、g : Y \rightarrow Z$  和 $\tilde{g}: Y \rightarrow Z$ 都是函数。证明：如果 $g \circ f = g \circ \tilde{f}$ 并且 $g$ 是单射，那么 $f = \tilde{f}$ 。如果 $g$ 不是单射，那么上面的结论是否依然成立？证明：如果 $g \circ f = \tilde{g} \circ f$ 并且 $f$ 是满射、那么 $g = \tilde{g}$ 。如果 $f$ 不是满射，那么上述结论是否成立。
+
+**证明：**
+
+单射：
+
+$\because g$  是单射，$\therefore y_1,y_2 \in Y, y_1 \neq y2, g(y_1) \neq g(y_2)$ 
+
+$\therefore g \circ f = g \circ \tilde{f} \Rightarrow f = \tilde{f}$ 得证。
+
+如果$g$ 不是单射，那么上面的结论不一定成立。
+
+满射：
+
+假设 $g \neq \tilde{g}, \because \forall y \in Y, \exists x \in X $ 
+
+令 $x_1 = x_2 \Rightarrow y_1 = y_2, y_1, y_2 \in Y \therefore g(x) = \tilde{g}(x) $  得证。
+
+
+
+**3.3.5** 设 $f: X \rightarrow Y$ 和 $g: Y \rightarrow Z$ 都是函数，证明：如果 $g \circ f$ 是单射，则 $f$ 一定是单射，$g$ 是否也一定是单射？如果 $g \circ f$ 为满射，则 $g$ 一定为满射。$f$ 是否也必须为满射？
+
+**证明：**
+
+单射：
+
+如果 $f$ 不为单射，那么 $x_1 \neq x_2,  f(x_1) = f(x_2) \Rightarrow g(f(x_1)) = g(f(x_2))$ 与 $g \circ f$ 也为单射矛盾。
+
+所以 $f$ 一定为单射。
+
+接下来证明 $g$ 也为单射：
+
+若 $g$ 不为单射，$g(y_1) = g (y_2), y_1 \neq y_2$ 
+
+又 $f$ 为单射，$\therefore y_1 \neq y_2 \Rightarrow x_1 \neq x_2$ 与题设矛盾，得证。
+
+满射：
+
+假设 $g$ 不为满射，那么存在$z \in Z$ ，$z$ 对 $Y$ 中所有元素都形不成映射，也就是不存在$f(x)$ 得证。
+
+$f$ 不一定为满射：
+
+存在有 $y \in Y \wedge f(x) != y \wedge g \circ f $ 为满射。
+
+在此情况下 $y_1 \in Y_1, g(y_1) = z, z \in Z, Y_1 \subset Y$  即可得到这个结论。
+
+
+
+**3.3.6** 令 $f : X \rightarrow Y$ 是一个双射函数，并且 $f^{-1} : Y \rightarrow X$ 是 $f$ 的逆。证明下面的消去律：对任意的 $x \in X$ 有 $f^{-1}(f(x)) \ x$ ，对任意的 $y \in Y$ 有 $f(f^{-1}(x)) = y$ 。推导 $f^{-1}$ 也是可逆的，并且它的逆就是 $f$ (于是有$(f^{-1})^{-1} = f$) 。
+
+**证明：**
+
+由于 $f$ 是双射函数，对于 $\forall x \in X$ 存在唯一一个 $y$ ,使得 $ f(x) = y， f^{-1}(y) = x$。
+
+$\therefore f^{-1}(f(x)) =x$，得证。
+
+同理可以证明 $f(f^{-1}(x)) = y$
+
+取 $\forall y \in Y, f^{-1}(y) = x \Rightarrow (f^{-1})^{-1}(x) = y = f(x)$ 得证。
+
+
+
+**3.3.7** 设$f: X \rightarrow Y$ 和 $g : Y \rightarrow X$  都是函数，证明：如果 $f$ 和 $g$ 都是双射，那么 $g \circ f$ 也是双射，并且有 $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$。
+
+**证明：**
+
+由3.3.6可得，若$f,g$ 都是单射，那么$g \circ f$ 也是单射。
+
+若 $f, g$ 都是满射，那么 $g \circ f$ 也是满射。
+
+所以第一问得证。
+
+双射映射为 $X \rightarrow Y \rightarrow Z$ ，由于他们为双射，所以 $(g \circ f)^{-1} : Z \rightarrow X$ 
+
+$(g \circ f)^{-1}(z) = x$
+
+$g^{-1}(z) = y, f^{-1}(y) = z \Rightarrow f^{-1}(g^{-1}(z)) = x$
+
+得证。
+
+
+
+**3.3.8**  如果 $X$ 是 $Y$ 的一个子集，令 $\imath_{X \rightarrow Y} : X \rightarrow Y$ 表示从 $X$ 到 $Y$ 的包含映射，该映射被定义为：对任意的 $x \in X$ 有 $x \mapsto x$，即对任意的 $x \in X$ 有 $\imath_{X \rightarrow Y}(x) := x$。特别的，映射 $\imath_{ X \rightarrow X}$ 被称为$X$ 上的恒等映射。
+
+1. 证明：如果 $X \subseteq Y \subseteq Z$，那么 $\imath_{Y \rightarrow Z} \circ \imath_{X \rightarrow Y} = \imath_{X \rightarrow Z}$。
+2. 证明：如果 $f: A \rightarrow B$ 是任意一个函数，那么 $f = f \circ \imath_{A \rightarrow A} = \imath_{B \rightarrow B} \circ f$。
+3. 证明：如果 $f: A \rightarrow B$ 是一个双射函数，那么 $f \circ f^{-1} = \imath_{B \rightarrow B}$ 并且 $f^{-1} \circ f = \imath_{A \rightarrow A}$。
+4. 证明：如果 $X$ 和 $Y$ 是不相交的集合，并且 $f: X \rightarrow Z$ 和 $g: Y \rightarrow Z$ 都是函数，那么存在唯一的函数 $h : X \cup Y \rightarrow Z$ 使得 $h \circ \imath_{X \rightarrow X \cup Y}  = f$ 并且 $h \circ \imath_{Y \rightarrow X \cup Y} = g$。
+
+**证明：**
+
+1. $\imath_{X \rightarrow Y}(x) := x, \because Y \subseteq Z, \therefore \imath_{Y \rightarrow Z}(x) := x$
+
+   $\because X \subseteq Z \therefore \imath_{X \rightarrow Z} := x$ 得证。
+
+2. 定义域都为 $A$ ，值域都为 $B$
+
+   对于$x \in A$ ，$f \circ \imath_{A \rightarrow A}(X) = f(\imath_{A \rightarrow A}(x)) = f(x)$ 得证。
+
+   对于$x \in A$，$\imath_{B \rightarrow B}(f(x)) = y = f(x) $ 得证。
+
+3. 利用3.3.6，得证。
+
+4. 对于$x \in X, h(x) = f(x), if \ x \in Y, h(x) = g(x) $证明：$h \circ \imath_{X \cup Y} = f$ 
+
+   定义域都为$X$，值域都为 $Z$ ，对于任意 $x \in X$
+
+   $h \circ \imath_{X \rightarrow X \cup Y}(x) = z = f(x)$ 得证。
+
+   同理可以证明第二个结论。
+
 
 
 
