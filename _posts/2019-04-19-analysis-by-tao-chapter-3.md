@@ -589,6 +589,300 @@ $g^{-1}(z) = y, f^{-1}(y) = z \Rightarrow f^{-1}(g^{-1}(z)) = x$
 
 
 
+## 象和逆象
+
+**3.4.1** 设 $f : X \rightarrow Y$  是一个双射函数，并且 $f^{-1} : Y \rightarrow X$ 是它的逆，设 $V$ 是 $X$ 的任意一个子集。证明：$V$  在 $f^{-1}$ 下的前象与 $V$ 在 $f$ 上的逆象是同一个集合，从而吧这两个集合都用 $f^{-1}(V)$ 来表示不会造成任何不兼容的情况。
+
+**证明：**
+
+前象：
+
+$V$ 在 $f^{-1}$ 下的前象：$f^{-1}(V) := \{f^{-1}(x): x \in V\}$
+
+V 在 $f$ 下的逆象: $ \{x \in X : f(x) \in V\}$
+
+又因为 $f$ 是一个双射函数。
+
+利用替换公理，
+
+逆象：$P(x, y), x \in X, y \in V, P(x, y) \ is \ true$
+
+前象：$Q(x, y), y \in V, Q(x, y) \ is \ true$ 
+
+因为 $f$ 是一个双射函数，所以每一个 $y \in V$   必然有一个 $x \in X$  所以两个定义实际上是等价的，得证。
+
+
+
+**3.4.2** 令 $f: X \rightarrow Y$ 表示从集合$X$ 到集合 $Y$ 的函数，$S$ 是 $X$ 的一个子集，$U$ 是 $Y$ 的一个子集。一般情况下，$f^{-1}(f(S))$ 与 $S$ 有什么关系？$f(f^{-1}(U))$ 与 $U$ 又有什么关系
+
+**证明：**
+
+设 $f(S) = U = \{f(x): x \in S\}$
+
+$f^{-1}(f(S)) = f^{-1}(U) = \{x \in X: f(x) \in U\}$
+
+$\forall x \in S, f(x) \in U, \wedge x \in S, x \in X$
+
+$S \subseteq f^{-1}(f(S))$ 
+
+
+
+设 $f^{-1}(U) = S = \{x \in X: f(x) \in U\}$
+
+$\forall x \in S, x \in X, f(x) \in U$
+
+$f(f^{-1}(U)) = \{f(x): x \in S\}$
+
+$\forall y \in f(f^{-1}(U)), y \in (f(s): x \in S)$	
+
+已知 $\forall x \in S, f(x) \in U$
+
+$y \in U$
+
+$f(f^{-1}(U)) \subseteq U$
+
+
+
+**3.4.3**  设 $A$ 和 $B$ 是集合 $X$ 的两个子集，且 $f: X \rightarrow Y$ 是一个函数。证明：$f(A \cap B) \subseteq f(A) \cap f(B), f(A) \setminus f(B) \subseteq f(A \setminus B), f(A \cup B) = f(A) \cup f(B)$ 。对于前两个结论，$\subseteq$ 可以被加强为 $=$ 吗？
+
+**证明：**
+
+1. $f(A \cap B) \subseteq f(A)$
+
+   $f(A \cap B) \subseteq f(B)$
+
+   $\therefore f(A \cap B) \subseteq f(A) \cap f(B)$
+
+2. $f(A) \setminus f(B) = \{y \in f(A) : y \notin f(B)\}$
+
+   $\forall y_0 \in f(A) \setminus f(B)$ 都存在一个对应的$ x_0 \in A , y_0 = f(x_0)$
+
+   同时 $x_0 \notin B$ 否则 $f(x_0) \in f(B)$ 矛盾。
+
+   所以 $y_0 \in \{f(x): x \in A \setminus B\} = f(A \setminus B) $
+
+   $\therefore f(A) \setminus f(B) \subseteq f(A \setminus B)$
+
+3. $\forall y \in f(A \cup B)$ 都存在一个对应的 $x \in A \cup B, f(x) = y$
+
+   $\therefore x \in A \vee x \in B, y \in f(A) \vee y \in f(B)$
+
+   $y \in f(A) \cup f(B)$
+
+   $f(A \cup B) \subseteq f(A) \cup f(B)$
+
+   $\forall y \in f(A) \cup f(B) \Rightarrow y \in f(A) \vee y \in f(B)$
+
+   同之前的证明：
+
+   $x \in A \cup B, y \in f(A \cup B)$
+
+   $f(A) \cup f(B) \subseteq f(A \cup B)$
+
+   $f(A) \cup f(B) = f(A \cup B)$
+
+4. 不可能，除非 $f$ 是一个双射。
+
+
+
+**3.4.4** 设 $f: X \rightarrow Y$ 是从一个集合 $X$ 到另一个集合 $Y$ 的函数，并且令 $U, V$ 为 $Y$ 的子集。证明：$f^{-1}(U \cup V) = f^{-1}(U) \cup f^{-1}(V), f^{-1}(U \cap V) = f^{-1}(U) \cap f^{-1}(V), f^{-1}(U \setminus V) = f^{-1}(U) \setminus f^{-1}(V)$。
+
+**证明：**
+
+1. $f^{-1}(U \cup V) = \{x \in X: f(x) \in U \cup V\}$
+
+   $\forall x_0 \in f^{-1}(U \cup V), f(x) \in U \cup V \Rightarrow f(x) \in U \vee f(x) \in V$
+
+   $x \in f^{-1}(U) \vee x \in f^{-1}(V) \Rightarrow x \in f^{-1}(U) \cup f^{-1}(V)$
+
+   $f^{-1}(U \cup V) \subseteq f^{-1}(U) \cup f^{-1}(V)$
+
+   $\forall x \in f^{-1}(U) \cup f^{-1}(V) \Rightarrow x \in f^{-1}(U) \vee f^{-1}(V)$
+
+   $f(x) \in U \vee f(x) \in V \Rightarrow f(x) \in U \cup V$
+
+   $f^{-1}(U) \cup f^{-1}(V) \subseteq f^{-1}(U \cup V)$
+
+   得证。
+
+2. $\forall x \in f^{-1}(U \cap V) \Rightarrow f(x) \in U \cap V$
+
+   $f(x) \in U \wedge f(x) \in V$
+
+   $x \in f^{-1}(U) \wedge x \in f^{-1}(V)$
+
+   $x \in f^{-1}(U) \cap f^{-1}(V)$
+
+   $f^{-1}(U \cap V) \subseteq f^{-1}(U) \cap f^{-1}(V)$
+
+   $\forall x \in f^{-1}(U) \cap f^{-1}(V)$
+
+   $x \in f^{-1}(U) \wedge f^{-1}(V)$
+
+   $f(x) \in U \wedge f(x) \in V \Rightarrow f(x) \in U \cap V$
+
+   $x \in f^{-1}(U \cap V) \Rightarrow f^{-1}(U) \cap f^{-1}(V) \subseteq f^{-1}(U \cap V)$ 
+
+   得证。
+
+3. $\forall x \in f^{-1}(U \setminus V) \Rightarrow f(x) \in U \setminus V$
+
+   $f(x) \in U \wedge f(x) \notin V$
+
+   $x \in f^{-1}(U) \wedge x \notin f^{-1}(V) $
+
+   $x \in f^{-1}(U) \setminus f^{-1}(V)$
+
+   $f^{-1}(U \setminus V) \subseteq f^{-1}(U) \setminus f^{-1}(V)$
+
+   $\forall x \in f^{-1}(U) \setminus f^{-1}(V)$
+
+   $x \in f^{-1}(U) \wedge x \notin f^{-1}(V)$
+
+   $f(x) \in U \wedge f(x) \notin  V$
+
+   $f(x) \in U \setminus V$
+
+   $x \in f^{-1}(U \setminus V)$
+
+   $f^{-1}(U) \setminus f^{-1}(V) \subseteq f^{-1}(U \setminus V)$
+
+   得证。
+
+   **注意：** 3.4.3和3.4.4之间的最大的区别是，一个y可能对应多个x，所以不一定可以反推。
+
+
+
+**3.3.5** 设 $f: X \rightarrow Y$ 是从一个集合 $X$ 到另一个集合 $Y$ 的函数，证明：$f(f^{-1}(S)) = S$ 对每一个 $S \subseteq Y$ 均成立的充要条件是 $f$ 是满射。证明：$f^{-1}(f(S)) = S$ 对每一个 $S \subseteq X$ 均成立的条件是  $f$ 是单射。
+
+**证明：**
+
+1. 先证充分性：
+
+   假设 $f$ 不是满射，也就是至少存在一个 $y_0 \in Y, \forall x \in X, f(x) \neq y_0$，若 $y_0 \in S$,则显然假设不成立，得证。
+
+   再证必要性：
+
+   $f$ 是满射，设 $U = f^{-1}(S) = \{x \in X : f(x) \in S\}, f(U) = \{f(x): x \in U\}$
+
+   $f(U) \subseteq S$，因为 $f$ 是满射，所以对任意的 $y_0 \in S$ 都能找到一个$x_0 \in X$ 满足 $f(x_0) = y_0$
+
+   由 $U$ 的定义可知，$x_0 \in U \therefore y_o \in f(U)$
+
+   $\therefore S \subseteq f(f^{-1}(S))$ 
+
+   得证。
+
+2. 假设 $f$  不是单射，那么存在有 $x_1, x_2, f(x_1) = f(x_2)$
+
+   $x_1 \in S, x_2 \notin S, f(x_1) = y_1, f^{-1}(y_1) \neq S$。所以假设不成立，得证。
+
+
+
+**3.3.6** 证明：$X$ 是一个集合，那么 $\{Y: Y $ 是 $X$ 的一个子集$\}$ 是一个集合。
+
+**证明：** 
+
+由已知的：$Y \subseteq X$ ,假设 $X = \phi \Rightarrow Y = \phi$
+
+$U = $$\{Y: Y $ 是 $X$ 的一个子集$\} = \{\phi\}$ 
+
+成立。
+
+设 $X_n$ 中有 $n$ 个元素，$U_n$ 为一个集合
+
+当 $X_{n+1}$ 中有 $n + 1$ 个元素时，$U_{n+1}$ 至少包含 $U_n$ 中的所有元素。也为集合。得证。
+
+
+
+**3.3.7** 设 $X$ 和 $Y$ 是集合。对于任意一个函数 $f: X' \rightarrow Y'$，如果它满足定义域 $X'$ 是 $X$ 的子集，并且 $Y'$ 是 $Y$ 的子集，那么就称 $f$ 是从集合 $X$ 到 $Y$ 的偏函数。证明：从 $X$ 到 $Y $ 的全体偏函数本身成为一个集合。
+
+**证明：**
+
+根据3.4.6，所有的 $X$ 的子集构成一个集合 $A$ ,所有 $Y$ 的子集构成一个集合 $B$ ，对于 $A$ 中任意一个元素 $x$，$B$ 中任意一个元素 $y$，$x$ 和 $y$ 都是集合。根据幂集公理，$x$ 和 $y$ 为元素的集合也可以组成集合，记为 $D$ 。这样，对于 $D$ 中某个元素，即某个确定的 $x$ 和 $y$ 利用替换公理可以将其替换成 $C$ 中的元素，再对 $D$ 运用并集公理，得到的函数就是偏函数的集合。
+
+
+
+**3.4.8** 证明两集合并集公理可以从公理3.1，3.3和3.11推出。
+
+**证明：**
+
+考虑两个集合 $ A, B$ 根据双元素公理，存在集合 $S = \{A, B\}$，对S使用并公理：
+
+$x \in \bigcup S = x \in A \vee x \in B$
+
+这就是两合集并集公理。
+
+
+
+**3.4.9** 证明：如果 $\beta$ 和 $\beta'$ 是集合 $I$ 中的两个元素，并且对每一个 $\alpha \in I$，我们指定一个集合 $A_{\alpha}$，那么
+
+​    $ \{x \in A_\beta: $ 对任意的$ \alpha \in I, x \in A_\alpha\}$
+
+$= \{x \in A_{\beta'}:$ 对任意的$ \alpha \in I , x \in A_\alpha\}$
+
+从而式3.3中给出的 $$\bigcap\limits_{\alpha \in I} A_\alpha$$ 的定义不依赖于 $\beta$，这也解释了为什么式3.4为真。
+
+**证明：**
+
+如果要等号两边成立，则需要：
+
+$\{x \in A_\beta \cap A_{\beta'}: $ 对于一切 $\alpha \in I, x \in A_\alpha\}$
+
+对于式3.4显然成立。
+
+
+
+**3.4.10**  设 $I$ 和 $J$ 是两个集合，并对任意的 $\alpha \in I \cup J$，$A_\alpha$ 表示一个集合。证明：$(\bigcup\limits_{\alpha \in I}A_\alpha) \cup (\bigcup\limits_{\alpha \in J}A_\alpha) = \bigcup\limits_{\alpha \in I \cup J}A_\alpha$。如果 $J$ 和 $I$ 都是非空的，证明：$(\bigcap\limits_{\alpha \in I}A_\alpha) \cap (\bigcap\limits_{\alpha \in J}A_\alpha) = \bigcap\limits_{\alpha \in I \cup J} A_\alpha$。
+
+**证明：**
+
+$\forall y \in (\bigcup\limits_{\alpha \in I}A_\alpha) \cup (\bigcup\limits_{\alpha \in J}A_\alpha) $
+
+存在 $\alpha \in I$ 使得 $y \in A_\alpha$ 或者 存在 $\alpha \in J$ 使得 $y \in A_\alpha$
+
+存在 $\alpha \in I \cup J$ 使得 $y \in A_\alpha$
+
+$\bigcup\limits_{\alpha \in I \cup J}A_\alpha$ 得证。
+
+接下来证第二问。
+
+$(\bigcap\limits_{\alpha \in I}A_\alpha) \cap (\bigcap\limits_{\alpha \in J}A_\alpha) $
+
+对任意的 $\alpha \in I, y \in A_\alpha$  且对任意的 $\alpha \in J, y \in A_\alpha$
+
+对任意的 $\alpha \in I \cup J$ 都有 $y \in A_\alpha$ 得证。
+
+
+
+**3.4.11** 设 $X$ 是一个集合，$I$ 是一个非空集合，并且对任意的 $\alpha \in I$，$A_\alpha$ 是 $X$ 的子集，证明：$ X \setminus \bigcup\limits_{\alpha \in I} A_\alpha = \bigcap\limits_{\alpha \in I}(X \setminus A_\alpha)$ 和 $X \setminus \bigcap\limits_{\alpha \in I}A_\alpha = \bigcup\limits_{\alpha \in I}(X \setminus A_\alpha)$
+
+**证明：**
+
+1. $y \in X \wedge \forall \alpha \in I, y \notin A_\alpha$
+
+   $\forall \alpha \in I, y \in X \wedge y \notin A_\alpha$
+
+   等式左右两边相等。
+
+2. $y \in X \setminus \forall \alpha \in I, y \in A_\alpha$
+
+   $y \in X \wedge \exists \alpha \in I, y \notin A_\alpha$
+
+   左右两边相等，得证。
+
+   
+
+
+
+
+
+
+
+
+
+
+
 
 
 
