@@ -873,6 +873,220 @@ $(\bigcap\limits_{\alpha \in I}A_\alpha) \cap (\bigcap\limits_{\alpha \in J}A_\a
 
    
 
+## 笛卡尔积
+
+**3.5.1** 
+
+**证明：**
+
+$(x, y) = \{\{x\}, \{x, y\}\} ,(x',y') = \{\{x'\}, \{x',y'\}\}$
+
+根据集合相等的定义，$(x,y) = (x', y') \Leftrightarrow \{\{x\},\{x, y\}\} = \{\{x'\}, \{x',y'\}\}$
+$\Leftrightarrow \{x\} = \{x'\} \wedge \{x, y\} = \{x', y'\} \Leftrightarrow x = x', y = y'$
+得证。
+挑战证明在定义 $(x, y) = \{x, \{x, y\}\}$ 定义下：$(x, y) = \{x', y'\} \Leftrightarrow x = x', y = y'$
+$\{x, \{x, y\}\} =\{x', \{x', y'\}\}$ 可得 $x = x', \{x', y'\} = \{x, y\}$ 此种情况下显然得证。
+还有一种情况 $x = \{x', y'\}, x' = \{x, y\} \Rightarrow x = \{\{x, y\}, y'\}$
+
+$x \in x' \wedge x' \in x$ 与习题3.2.2矛盾，$\therefore x = x', y = y'$。
+
+
+
+**3.5.2**
+
+**证明：**由于 $x_i,y_i$ 为有序 $n$ 元组，$(x(i) = y(i), 1 \leq i \leq n)  \Leftrightarrow (x_i = y_i, 1 \leq i \leq n)$ 得证。
+
+接下来证笛卡尔积是一个集合 设 $\bigcup\limits_{1 \leq i \leq n}X_i = X$
+
+$f \in \{f(i) = X_i, 1 \leq i \leq n\}$
+
+$X_i$ 是 $X$ 的子集，根据习题3.4.7，笛卡尔积本身为一个集合。
+
+
+
+**3.5.3 ** 证明有序 $n$ 元组的相等定义遵守自反性，对称性和传递性公理。
+
+**证明：**
+
+自反性：
+
+$(x_i = x_i, 1 \leq i \leq n) \Rightarrow (x_i)_{1 \leq i \leq n} = (x_i)_{1 \leq i \leq n}$
+
+对称性：
+
+$(x_i = y_i, 1 \leq i \leq n) \Rightarrow (y_i = x_i, 1 \leq i \leq n)$ 得证。
+
+传递性：
+
+$(x_i = y_i,1 \leq i \leq n) , (y_i = z_i, 1 \leq i \leq n) \Rightarrow (x_i = z_i 1 \leq i \leq n)$
+
+$\Rightarrow (x)_{1 \leq i \leq n} = (z)_{1 \leq i \leq n}$ 得证。
+
+
+
+**3.5.4**
+
+**证明：**
+
+$A \times (B \cup C) = \{(x, y), x \in A, y \in B \cup C\} = \{(x, y), x \in A, y \in B \vee x \in A, y \in C\}$
+
+$= (A \times B) \cup (A \times C)$
+
+$A \times (B \cap C) = \{(x, y), x \in A, y \in B \cap C\} = {(x ,y), A \in A y \in B \wedge x \in A, y \in V}$
+
+$= (A \times B) \cap (A \times C)$
+
+$A \times (B \setminus C) = \{(x, y), x \in A, y \in (B \setminus C)\} = \{(x, y), x \in A, y \in B, \wedge x \in A,y \notin C\}$ 
+
+$= (A \times B) \setminus (A \times C)$
+
+
+
+**3.5.5**
+
+**证明：**
+
+$(A \times B) \cap (C \times D) = \{(x, y), x \in A,y \in B\} \cap \{(x, y), x \in C, y \in D\}$
+
+$= \{(x, y), x \in A \cap C, y \in B \cap D\} = (A \cap C) \times (B \cap D)$
+
+剩下两个都是错误的，可以举出反例。
+
+
+
+**3.5.6**
+
+**证明：**
+
+$A \times B \subseteq C \times D \Leftrightarrow \{(x, y): x \in A, y \in B\} \subseteq \{(x, y): x \in C, y \in D\}$
+
+$\Leftrightarrow A \subseteq C, B \subseteq D$
+
+$(A \times B = C \times D) \Leftrightarrow (A \times B \subseteq C \times D) \wedge (C \times D \subseteq A \times B)$
+
+$\Leftrightarrow A \subseteq C, B \subseteq D \wedge C \subseteq A ,D \subseteq C \Leftrightarrow A = C, B = D$ 得证。
+
+如果去掉空集的话，结论错误。
+
+
+
+**3.5.7**
+
+**证明：**
+
+$h(z) = X \times Y = (f(z), g(z)), \forall z \in Z$
+
+$(\pi_{X \times Y \rightarrow X} \circ h)(z) = \pi_{X \times Y \rightarrow X}(X \times Y) = X = f(z)$ 
+
+$(\pi_{X \times Y \rightarrow Y} \circ h)(z) = \pi_{X \times Y \rightarrow Y}(X \times Y) = Y = g(z)$
+
+接下来证明唯一性，假设一个函数$h':Z \rightarrow X \times Y$ 且满足以上结论，
+
+$(\pi_{X \times Y \rightarrow X} \circ h')(z) = f(z) = (\pi_{X \times Y \rightarrow X} \circ h)(z)$
+
+$(\pi_{X \times Y \rightarrow Y} \circ h')(z) = g(z) = (\pi_{X \times Y \rightarrow Y} \circ h)(z)$
+
+$\therefore h = h'$
+
+
+
+**3.4.8**
+
+**证明：**
+
+假设笛卡尔积 $\prod\limits_{i = 1}^{n}X_i$ 为空集，且 $X_i$ 都为非空集合。与 **引理3.5.12** 相矛盾。
+
+
+
+**3.4.9**
+
+**证明：**
+
+$(\bigcup\limits_{\alpha \in I}A_\alpha) \cap (\bigcup\limits_{\beta \in J}B_\beta)$
+
+$\Leftrightarrow \exists \alpha \in I, x \in A_\alpha \wedge \exists \beta \in J, x \in B_\beta$
+
+$\Leftrightarrow \exists (\alpha, \beta) \in I \times J, (x \in A_\alpha) \wedge (x \in B_\beta)$
+
+$\Leftrightarrow (\alpha, \beta) \in I \times J, x \in (A_\alpha \cap B_\beta)$
+
+$x \in \bigcup\limits_{(\alpha, \beta) \in I \times J}(A_\alpha \cap B_\beta)$
+
+
+
+**3.4.10**
+
+**证明：**
+
+$f = \tilde{f} \Leftrightarrow \forall x \in X, f(x) = \tilde{f}(x) $
+
+$\Leftrightarrow \forall x \in X, (x, f(x)) = (x, \tilde{f}(x))$
+
+定义一个函数 $g, g(x) = y, (x, y) = G$ ，由已知得，$g$ 显然存在，根据3.4.9，只存在一个 $g$ 。得证。
+
+
+
+**3.5.11**
+
+**证明：**
+
+$X \times Y = \{(x, y), x \in X, y \in Y\}$ 是一个集合，
+
+使用替换公理
+
+$V = \{G \in X \times Y: G$满足锤线$\}，G \in V$ 利用3.5.10显然得证。
+
+
+
+**3.5.12**
+
+**证明：**
+
+当 $N = 0,a(0) = 0$
+
+设 $N = k$ 时成立，然后设：$N = k + 1, a_{k+1}:\{n \in N, n \leq k + 1\} \rightarrow N$ 
+
+定义 $a_{k+1}$ 如下：
+
+$a_{k+1}(i) = a_k(i), i \leq k, a_{k+1}(k+1) = f(k, a_k(k))$
+
+显然 $a_{k+1}$ 符合需证明的命题。
+
+challenge：
+
+ 当 $A_0 = \{0\}, B_0 = \{1,2,3…\}$ 时a,b,c,d,e显然成立。f时将两集合互换，显然成立。
+
+
+
+**3.5.13**
+
+**证明：**
+
+我们先定义一个 $f, f(0) = 0', f(n++) = f(n)++', \forall n \in N$
+
+可得 $f(n) = n', f(n++) = n'++'$
+
+当 $n = 0$ 的时候，显然 $f$ 唯一。接下来证 $n > 0$
+
+设 $f(n++) = a, f(n++) = b, f(n)++' = a, f(n)++' = b$ 由于此数系也遵循皮亚诺定理 $a \neq b$  
+
+$\because f(n) = n', a = n', b = n', a \neq b$ 矛盾
+
+设 $f(n) = f(m), m,n \in N$ 如果 $f(n) = f(m) = 0'$ 可得 $m = n = 0$
+
+如果 $f(n) = f(m) = n' \neq 0' \Rightarrow n \neq 0, m \neq 0$
+
+$a, b \in \mathbb{N}, a++ = n, b++ = m, f(a)++' = f(b) ++' \Rightarrow f(a) = f(b)$
+
+假设 $n \neq m, n + m + d, d > 0 \Rightarrow f(0) = f(d) = 0' \Rightarrow f(d) = f(e)++' = 0'$
+
+与皮亚诺公理矛盾，所以他为单射的。
+
+接下来证明满射
+
+$\forall n' \in \mathbb{N}, n' = 0 \Rightarrow f(0) = n'$
+
+如果 $n' > 0'$ 则有 $m' \in \mathbb{N}', m'++' = n'$可得小于 $n'$ 任何另类自然数，可得它为满射。
 
 
 
@@ -895,6 +1109,3 @@ $(\bigcap\limits_{\alpha \in I}A_\alpha) \cap (\bigcap\limits_{\alpha \in J}A_\a
 
 
 
-
-
- 
