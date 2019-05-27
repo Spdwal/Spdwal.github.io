@@ -1088,6 +1088,192 @@ $\forall n' \in \mathbb{N}, n' = 0 \Rightarrow f(0) = n'$
 
 如果 $n' > 0'$ 则有 $m' \in \mathbb{N}', m'++' = n'$可得小于 $n'$ 任何另类自然数，可得它为满射。
 
+​	
+
+## 集合的基数
+
+**3.6.1**
+
+**证明：**
+
+$X \rightarrow X$显然为双射，所以 $X$ 与 $X$ 有相同的基数。
+
+$X \rightarrow Y$ 为双射，双射为自反的，所以 $Y \rightarrow X$ 也为双射，所以 $Y$ 和 $X$ 有相同的基数。
+
+$X \rightarrow Y$ 为双射，$Y \rightarrow Z$ 为双射，可得 $X \rightarrow Z$ 为双射，所以 $X$ 和 $Z$ 有相同的基数。
+
+
+
+**3.6.2**
+
+**证明：**
+
+假设 $X = \phi$ 但是 $X$ 的基数不是0。
+
+当 $\#(X) = 1$ ，$X$ 可以与{1}组成一个双射，所以 $X \neq \phi$
+
+当$\#(X) = n$， $X$ 可以与 $\{i \in N, 1 \leq i \leq n\}$ 组成一个双射，同样 $\phi$ 无法和任何集合组成双射。所以得证 $X = \phi, \#(X) = 0$
+
+同样用反证法可得 $\#(X) = 0, X = \phi$。
+
+
+
+**3.6.3**
+
+**证明：**
+
+设 $n = 1$ 则 $f(1) = a$ 令 $M = a++$，可得：$f(i) \leq M$ 
+
+设 $n = j$ 成立，$M = b, f(j) \leq b$
+
+当 $n = j + 1$ 当 $f(j+1) \leq b \rightarrow f(j + 1) \leq M$
+
+当 $f(j + 1) = c \geq b \rightarrow \exists M \in N, M = c $
+
+所以对任意的 $i$ 都必然存在 $f(i) \leq M$
+
+
+
+**3.6.4**
+
+**证明：**
+
+1. 由引理3.6.9 ，$\#((X \cup \{x\}) \setminus \{x\}) = n$
+
+   $\#(X \cup \{x\}) = n++$  得证。
+
+2. 设 $X = \{x_1, x_2, x_3,…,x_n\}, Y = \{y_1, y_2,y_3,…,y_m\}$
+
+   $X_1 = X \cup \{y_1\}, X_2 = X_1 \cup \{y_2\}$ 依次类推 $X_m = X_{m - 1} \cup \{y_m\}$
+
+   先证第二问，当 $X \cap Y = \phi \Rightarrow y_1 \notin X, Y_2 \notin X … y_m \notin X$ 
+
+   使用习题3.6.3可得 $\#(X \cup Y) = m + n  = \#(X) + \#(Y)$
+
+   假设 $\#(X \cap Y) = 1$ 则显然可得 $\#(X \cup Y) = m + n - 1 \leq \#(X) + \#(Y)$
+
+   依次类推 $\#(X \cap Y) = k, k \leq m \wedge k \leq n, \#(X \cup Y) = m + n - k \leq \#(X) + \#(Y)$ 得证。
+
+3. $Y \subseteq X \Rightarrow Y \cup (X \setminus Y) = X, Y \cap (X \setminus Y) = \phi$
+
+   $\#(X) = \#(Y \cup (X \setminus Y)) = \#(Y) + \#(X \setminus Y)$
+
+   当 $X \setminus Y = \phi, \#(X \setminus Y) = 0$
+
+   $\#(X) = \#(Y)$ 否则 $\#(Y) < \#(X)$ 得证。
+
+4. 如果$f$ 为一对一的，也就是f为单射，那么 $\#(f(X)) = \#(X)$ 得证。
+
+   如果不是单射的，那么 $f(X)$ 是 单射函数 $g(X)$ 的子集，所以 $\#(f(X)) \leq \#(g(X)) = \#(X)$ 得证。
+
+5. $\#(X) = m, \#(Y) = n$ 设 $\#(X) = 0$ 则显然 $\#(X \times Y) = \#(Y) = 0 \times n = 0$ 
+
+   设 $\#(X) = m$ 时 $X_1 = X \cup \{x_1\}, x_1 \notin X \Rightarrow \#(X_1) = m + 1$
+
+   $\#(X_1 \times Y) = \#(X \times Y) + \#(\{x_1\} \times Y) = m \times n + n = (m + 1) \times n$ 结论得证。
+
+6. 还是用数学归纳法来做 $\#(Y) = n$, 当 $X = \phi$ 的时候，$\{f: X \rightarrow Y\} = \phi$
+
+  $\#(Y^X) = 0$
+  
+  假设 $\#(Y^X) = \#(Y)^{\#(X)} = n^m$成立。
+  
+  设 $X_1 = X \cup \{x_1\}, x_1 \notin X, \Rightarrow \#(X_1) = m + 1$ 
+  
+  $Y^{X_1} = Y^X \times \{f: \{x_1\} \rightarrow Y\}$
+  
+  $\#(Y^{X_1}) = n^m \times n = n ^{m+1} $ 得证。
+  
+   
+  
+
+**3.6.5**
+
+**证明：**
+
+构造一个双射为 $(a, b) \rightarrow (b, a)，(a, b) \in A \times B$。
+
+$\#(A \times B) = m \times n, \#(B \times A) = n \times m$ 得证。
+
+
+
+**3.6.6**
+
+**证明：**
+
+$(A^B)^C$ 意思是 $\{f: C \rightarrow (A^B)\}$  $A^{B \times C}$ 意思是 $\{f: B \times C \rightarrow A\}$  
+
+$f \in (A^B)^C, \forall c \in C, f(c) = B \rightarrow A$
+
+我们接下来定义 $h$ 令 $h(f) = G \in A^{B \times C}, G(b, c) = [f(c)](b), \forall b \in B, c \in C$
+
+$h$ 是一个双射， $\#((A^B)^C) = \#(A^{B \times C})$ 使用习题 3.6.14 的结论，可得证。
+
+要证明 $a^b \times a^c = a^{b+c}$ 我们需要一个双射 $A^B \times A^C, A^{B \cup C}$  如果 $B \cap C = \phi$  
+
+$\forall (f, g) \in A^B \times A^C, f: B \rightarrow A, g:C \rightarrow A$ 
+
+$H(f, g)(x) = f(x), x \in B, H(f, g)(x) = g(x), x \in C$ 得证。
+
+
+
+**3.6.7**
+
+**证明：**
+
+设 $\#(A) = m, \#(B) = n$，可以定义两个双射
+
+$f: A \rightarrow \{i \in \mathbb{N}, 1 \leq i \leq m\}, g: B \rightarrow \{i \in \mathbb{N}, 1 \leq i \leq n\}$
+
+$h = g^{-1} \circ f$ 映射了 $A \rightarrow B$
+
+接下来证明 $h$ 是一个单射，我们假设 $h(x) = h(y)$ $g^{-1}(f(x)) = g^{-1}(f(y))$
+
+然后可得 $x = y$ 当且仅当它为双射。
+
+
+
+**3.6.8**
+
+**证明：**
+
+如果 $A = \phi$ 可得 $B \rightarrow \phi$ 是一个满射。显然得证。
+
+接下来设 $A \neq \phi$ 定义 $B \rightarrow A$
+
+$g(x) = f^{-1}(x), x \in f(A), g(x) = a, x \in B\setminus f(A), a \in A$ 此时 $g$ 是一个满射。
+
+
+
+**3.6.9**
+
+**证明：**
+
+根据3.6.14(b)，可得 $A \cup B$ 是有限的。
+
+3.6.14(c)，可得 $A \cap B$ 是有限的。
+
+$\#(A) = \#(A \setminus B) + \#(A \cap B)$
+
+$\#(B) = \#(B \setminus A) + \#(A \cap B)$
+
+$\#(A \cup B) = \#(A \setminus B) + \$(B \setminus A) + \#(A \cap B)$
+
+显然。
+
+
+
+**3.6.10**
+
+**证明：**
+
+假设所有的 $\#(A_i) \leq 1, \forall i \in \{1,2…,n\}$
+
+可得  $(\bigcup\limits_{i \in\{1,2…n\}}A_i) \leq n$ 矛盾吗，得证。
+
+
+
+
 
 
 
