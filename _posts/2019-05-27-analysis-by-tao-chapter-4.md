@@ -2,7 +2,7 @@
 layout: post
 title: "Analysis by Tao Chapter 4"
 category: 
-tags: []
+tags: [Math]
 ---
 
 <head>
@@ -265,11 +265,179 @@ $bf > 0, ad > 0, -ad < 0 \Rightarrow pz < 0 \Rightarrow zy < xz$ 得证。
 
 
 
+## 绝对值和指数运算
+
+**4.3.1**
+
+**证明：**
+
+1. 首先根据三歧性，x只有以下3种可能：$x > 0, x = 0, x < 0$。
+
+   根据定义可得：当 $x > 0$ 时，$|x| = x > 0$ ，当 $x < 0$ 时，$|x| = -x > 0$ 。 当 $x = 0$ 时，$|x| = x = 0$ 得证。
+
+2. 当 $x \geq 0, y \geq 0$ 时，$|x + y| = x + y = |x| + |y|$
+
+   当 $x < 0, y \geq 0$ 时，$|x + y| < y - x = |x|  + |y|$
+
+   当 $x \geq 0, y < 0$ 时，证明同上。
+
+   当 $x <0, y< 0$ 时，$|x+y| = (-x) + (-y) = |x| + |y|$ 得证
+
+3. 首先根据不等式得知 $y \geq 0$
+
+   当$x \geq 0$ 时，$|x| = x, y \geq x \Rightarrow y \geq |x|$
+
+   当 $x < 0$ 时，$-y \leq x < 0, y \geq (-x) > 0 ,|x| = -x \Rightarrow y \geq |x|$ 
+
+   当 $x \geq 0, |x| = x , x \leq |x|$
+
+   当 $x < 0, |x| = -x, x = -|x|, x \geq -|x|$ 得证。
+
+4. $x \geq 0, y \geq 0$ 时，$|xy| = xy = |x||y|$ 
+
+   $x < 0, y \geq 0$ 时，$|xy| = (-x)y = |x||y|$
+
+   $x \geq0, y < 0$ 时，同上。
+
+   $x < 0, y < 0$ 时，$|xy| = (-x)(-y) = |x||y|$ 
+
+5. 根据此题第一问可得，$d(x,y) = |x - y| \geq 0$ ，且 $|x - y| = 0 \Leftrightarrow x - y = 0, x = 0$ 得证。
+
+6. $d(x, y) = |x - y| , d(y, x) = |y - x|$
+
+   当 $x \geq y$ 时，$|x - y| = x - y, |y - x| = -(y - x) = x - y \Rightarrow |x - y| = |y - x|$
+
+   当 $x < y$ 时，证明同上。
+
+7. 原题可转化为 $|x - z| \leq |x - y| + |y - z|$
+
+   根据本题第二小问。$|(x - y) + (y - z)| \leq |x - y| + |y  - z| \Rightarrow |x - z| \leq |x -y| + |y - z|$ 得证。
 
 
 
+**4.3.2**
+
+**证明：**
+
+1. $\because x = y, d(x, y) = 0, \forall \varepsilon \in \mathbb{Q+}, \varepsilon > 0 = d(x, y)$ 第一问得证。
+
+   接下来证明第二问，假设 $x \neq y, d(x, y) = \vartheta > 0$
+
+   当 $\varepsilon = \vartheta / 2 \Rightarrow \varepsilon > 0$  得证。
+
+2. $|y - x| = |x - y| \leq \varepsilon$  得证。
+
+3. $|x - y| \leq \varepsilon, |y - z| \leq \vartheta, |(x - y) + (y - z)| \leq |x - y| + |y - z| = \varepsilon + \vartheta$ 得证。
+
+4. $ |x - y| \leq \varepsilon, |w -z| \leq \vartheta, |(x + z) - (y + w)| = |(x - y) + (z - w)| \leq |x - y| + |w - z| = \varepsilon + \vartheta$ 第一问得证。
+
+   $|( x- z) - (y - w)| = |(x - y) - (w - z)| \leq \varepsilon + \vartheta$ 得证。
+
+5. $|x - y| \leq \varepsilon < \varepsilon' \Rightarrow |x - y| < \varepsilon$ 得证。
+
+6. $y \leq w \leq z \Rightarrow -y \geq -w \geq -z \Rightarrow x - y \geq x - w \geq x - z$
+
+   同理，或者有 $x - z \geq x - w \geq x - y$ 
+
+   $d = max(d(x, z), d(x, y)), -d \leq x - w \leq d, d \leq \varepsilon$
+
+   $\Rightarrow |x - w| \leq \varepsilon$ 得证。
+
+7. $|x - y| \leq \varepsilon, z \neq 0$
+
+   $|zx - zy| = |z||x - y| \leq |z|\varepsilon$	 得证。
 
 
+
+**4.3.3**
+
+**证明：**
+
+1. 利用数学归纳法：
+
+   当 $n = 0, x^mx^0 = x^m \times 1 = x^m = x^{m + 0}$
+
+   设当 $n = k$ 时，$x^mx^n = x^{mk}$ 成立。
+
+   当 $ n = k + 1$时，$x^mx^{k+1} = x^mx^k \times x = x^{mk + 1}$ 得证。
+
+   当 $m = 0$ 时，$(x^n)^0 = 1 = x^{n \times 0}$
+
+   设当 $m = k$ 时，$(x^n)^k = x^{nk}$
+
+   当$m = k + 1$ 时，$(x^n)^{k + 1} = (x^n)^k \times x^n = x^{nk} \times x^n = x^{nk + n} = x^{n(k+1)}$ 得证。
+
+   当 $n = 0$ 时，$(xy)^n = 1 = x^0y^0$
+
+   设当 $n = k$ 时，$(xy)^k = x^ky^k$
+
+   当 $n = k + 1$ 时， $(xy)^{k+1} = (xy)^k \times xy = x^ky^k \times xy = x^{k+1}y^{k+1}$ 得证。
+
+2. 当$n = 1, x^1 = x = 0$ 显然成立。
+
+   $x^n = x^{n - 1} \times x = 0$ 显然有 $x^{n - 1} = 0 \vee x = 0$ 将 $x^{n - 1}$ 无穷分解下去，可到 $x^2 = 0 \Rightarrow x \times x = 0 \Rightarrow x = 0$  得证。
+
+3. 当 $n = 1$ 时， $x \geq y  \geq 0$ 
+
+   设当 $n = k$ 时，$x^k \geq y^k \geq 0$
+
+   当 $n = k + 1$ 时，$x^{k + 1}= x^k \times x, y^{k+1} = y^k \times y, \because x^k \geq y^k \geq 0, x \geq y \geq 0$
+
+   $\Rightarrow x^{k+1} \geq y^{k+1} \geq 0$
+
+   第二问同理可证。
+
+4. 当$n = 0$ 时，$|x|^0 = |x^0|$
+
+   设 $n = k$ 时，$|x^k| = |x|^k$
+
+   当$n = k + 1, |x^{k+1}| = |x^k \times x| = |x^k| |x| = |x|^k|x| = |x|^{k+1}$ 得证。
+
+
+
+**4.3.4**
+
+**证明：**
+
+1. 设 $m = a - b, n = c -d,a, b, c, d \in \mathbb{N^+} $$x^nx^m = x^{a - b}x^{c - d} = (x^a/x^b) \times (x^c/x^d) = (x^ax^c)/(x^bx^d) = x^{a + c}/x^{b + d}$
+
+   $= x^{a + c - b -d} =  x^{m + n}$ 
+
+   $(x^n)^m = (x^{c - d})^{a - b} = (x^c/x^d)^{a - b} = (x^c/x^d)^a/(x^c/x^d)^b = (x^{ac}/x^{ad}) \times(x^{bd }/x^{bc})$
+
+   $= (x^{ac + bd}) /(x^{ad + bc}) = x^{ac+bd-ad-bc} = x^{(a-b)(c-d)} = x^{mn}$ 得证。
+
+   $(xy)^{c - d} = (xy)^c/(xy)^d = x^c/x^d \times y^c/y^d = x^{c- d}y^{c-d} = x^ny^n$ 得证。
+
+2. 当 $n$ 为正数时，显然成立。
+
+   当 $n  < 0$ 时，设 $n = -p, p \in \mathbb{N^+}$
+
+   如果 $x = y, 1/x^p = 1/y^p, \because 1/x > 0, 1/y > 0, \therefore 1/x^p = 1/y^p >0$ 
+
+   当 $x > y, (1/xy) > 0, x(1/xy) > y(1/xy) > 0, (1/y) > (1/x) > 0 \Rightarrow (1/y)^p > (1/x)^p >0$ 得证。
+
+3. 当 $n > 0$ 时显然成立。
+
+   当 $n < 0$ 设 $n = -p, p \in \mathbb{N^+} (1/x)^p = (1/y)^p \Rightarrow 1/x = 1/y \Rightarrow x = y$  得证。
+
+4. 当 $n >=0$ 显然成立。
+
+   当 $n < 0$ 时， 设 $n = -p, p \in \mathbb{N^+}$
+
+   $1/|x^p| = 1/|x^p| \Rightarrow |x^p| = |x|^p $得证。
+
+
+
+**4.3.5**
+
+**证明：**
+
+当 $N = 1$ 时， $2^1 = 2 > 1$
+
+设当 $N = k$ 时， $2^k \geq k$
+
+当 $N = k + 1$ 时，$2^{k + 1} = 2\times 2^k = 2 ^k  + 2^k > 2^k + 1 \geq k + 1$ 得证。
 
  
 
