@@ -441,5 +441,59 @@ $bf > 0, ad > 0, -ad < 0 \Rightarrow pz < 0 \Rightarrow zy < xz$ 得证。
 
  
 
+## 有理数中的间隙
 
+**4.4.1**
+
+**证明：**
+
+ 当 $x > 0$ 时，设 $x = a / b, a = bn + q, q < b, a, b,q \in \mathbb{N^+}$
+
+$x = n + q/b, \because q < b \therefore q/b < 1, \Rightarrow n \leq n + q/b < n + 1$
+
+当 $x < 0$ 时，设 $x = a / b$ 不妨设 $a \in \mathbb{N^-}, b \in \mathbb{N^+}, q < b, q \in \mathbb{N^+}$
+
+$x = -n + q/b, n \in \mathbb{N^+} \Rightarrow -n \leq -n + q/b < -n+1$
+
+当 $x = 0$ 显然 $0 \leq 0 < 1$ 得证。
+
+
+
+**4.4.2**
+
+**证明：**
+
+1. 假设存在无穷递归的自然数列，假设 $\forall k \in \mathbb{N^+}, n \in \mathbb{N^+}, a_n \geq k$
+
+   不妨设$K \in \mathbb{N^+}, a_n \geq K, a_n = K+1, a_{n+1} < a_n = K + 1$
+
+   $a_{n+1} \leq K, a_{n+2} < K$ 当取 $K = 0$ 必然存在 $a_n < K = 0$ 此时 $a_n \notin \mathbb{N}$ 与自然数列矛盾，得证。
+
+2. 如果换成整数数列的话，成立，因为存在 $a_n < K = 0, a \in \mathbb{Z}$ 矛盾不成立。
+
+   如果换成正有理数，还是成立。
+
+   可以假设 $a_n = 1/n , n\in \mathbb{N^+}$
+
+   $a_1 = 1, a_n = 1/n, a_{n+1} = 1/(n+1), a_n - a_{n+1} = 1/[(n+1)n] >0$ 得证。
+
+
+
+**4.4.3**
+
+**证明：**
+
+1. 此题需证明自然数不能既是奇数又是偶数。
+
+   假设存在这样的数 $p, p = 2k_1, p = 2k_2 + 1, p, k_1, k_2 \in \mathbb{N}$
+
+   两式相减 $0 = 2(k_1 - k_2) - 1, k_1 - k_2 = 1/2$ 与两自然数相减为一个整数矛盾。所以自然数不能即是奇数又是偶数
+
+2. 设 $p = 2k + 1, p^2 = 4k^2 + 2k + 1$ 令 $K = 2k^2 + k, p^2 = 2K + 1$ 得证。
+
+3. $p^2 - q^2 = q^2 \geq 0, p^2 \geq q^2 p,q\in \mathbb{N^+}, p \geq q$ 等号只有在$q^2 = 0, q= 0$ 时才成立，由于 $p, q \in \mathbb{N^+}$
+
+   所以等号不成立，得证。
+
+   
 
