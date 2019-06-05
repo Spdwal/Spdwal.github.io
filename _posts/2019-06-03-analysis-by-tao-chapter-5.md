@@ -71,6 +71,118 @@ $(b_n)_{n = n_1}^{\infty} < I + 1$ 有界的。
 
 
 
+ ## 实数的构造
+
+**5.3.1**
+
+**证明：**
+
+如果 $x = y \Rightarrow LIM_{n \rightarrow \infty}a_n = LIM_{n \rightarrow \infty}b_n \Rightarrow (a_n)_{n =1}^\infty  (b_n)_{n = 1}^\infty$ 是等价的柯西序列。
+
+即 $ \forall \varepsilon > 0, (a_n)_{n = 0}^\infty, (b_n)_{n = 0}^\infty$ 是 $\varepsilon-$ 接近的。
+
+即 $\forall \varepsilon > 0, |a_n - b_n| \leq \varepsilon \Rightarrow |b_n - a_n| \leq \varepsilon$
+
+那 $ \forall \varepsilon > 0, (b_n)_{n = 0}^\infty, (a_n)_{n = 0}^\infty$ 是 $\varepsilon-$ 接近的。
+
+$\therefore y = x $
+
+接下来证$x = y, y = z \Rightarrow x =z$
+
+由已知得：$(a_n)_{n = 1}^\infty, (b_n)_{n =1}^\infty, (c_n)_{n = 1}^\infty$  具有以下的性质：
+
+$\forall n \in \N^+, \forall \varepsilon, \delta > 0, d(a_n, b_n) < \varepsilon, d(b_n, c_n) < \delta, d(a_n, c_n) < \varepsilon + \delta$
+
+任取 $\varepsilon' = \varepsilon + \delta$ 总能取到相应的 $\varepsilon, \delta > 0$ 
+
+所以 $\forall \varepsilon' > 0, d(a_n, c_n) < \varepsilon'$ 所以 $(a_n)_{n = 0}^\infty, (c_n)_{n = 0}^\infty$ 是等价的柯西序列。
+
+所以$x = z$ 得证。
+
+
+
+**5.3.2**
+
+**证明：**
+
+$xy = LIM_{n \rightarrow \infty}, \because (a_n)_{n = 0}^\infty, (b_n)_{n = 0}^\infty$ 都是柯西序列
+
+$\therefore \forall \varepsilon, \delta > 0,d(a_n, x) = \varepsilon, d(b_n, y) = \delta$
+
+根据4.3.7的结论(g)，$(a_n\times b_n)_{n = 0}^\infty $ 与 $xy$ 是 $(|x|\delta + |y|\varepsilon + \varepsilon\delta)-$ 接近的，
+
+因为取 $\varepsilon' =|x|\delta + |y|\varepsilon + \varepsilon\delta$ 时，可得 $(a_nb_n)_{n = 0}^\infty$ 是柯西序列，所以xy为实数。
+
+根据之前的证明
+
+$(a'_n \times b_n)_{n = 0}^\infty$ 与 $x'y$ 是 $((|x'|\delta + |y|\varepsilon + \varepsilon\delta)-)$ 接近的。
+
+又因为 $x = x'$ 所以 $(a'_n \times b_n)_{n = 0}^\infty$ 与 $xy$ 是 $((|x|\delta + |y|\varepsilon + \varepsilon\delta)-)$ 接近的。
+
+所以 $x'y$ 等价于 $xy$ 所以 $xy = x'y$。
+
+
+
+**5.3.3**
+
+**证明：**
+
+假设他们两个不是等价的。
+
+即存在 $\varepsilon  > 0, |a_n - b_n| > \varepsilon$ 
+
+$a \neq b$ 矛盾，得证。
+
+
+
+**5.3.4**
+
+**证明：**
+
+因为这两个序列是等价的，所以这两个序列是最终 $\varepsilon-$ 等价的，根据5.2.2的结论，所以它是有界的。
+
+
+
+**5.3.5**
+
+**证明：**
+
+任取 $\varepsilon > 0, \exists n, |1 / n - 0 | < \varepsilon$
+
+$n > 1/\varepsilon$ 即可。所以 $LIM_{n \rightarrow \infty}1/n$ 与 $LIM_{n\rightarrow \infty}0$ 是等价的。
+
+所以 $LIM_{n\rightarrow \infty}1/n = 0$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
