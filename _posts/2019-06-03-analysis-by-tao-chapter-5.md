@@ -155,6 +155,127 @@ $n > 1/\varepsilon$ 即可。所以 $LIM_{n \rightarrow \infty}1/n$ 与 $LIM_{n\
 
 
 
+## 对实数排序
+
+**5.4.1**
+
+**证明：**
+
+假设 $ x \neq 0, $ 柯西序列 $ (a_n)_{n = 0}^\infty = x$ 
+
+因为它是一个柯西序列，所以它是有界的，设 $\forall m, n \in \Q, mn > 0,\exists N \in \N^+ m \leq (a_n)_{n = N}^\infty \leq n$
+
+若 $mn < 0$ 那么会得 $(a_n)_{n = N}^\infty = x = 0$ 与题设矛盾。
+
+因为有理数的三岐性，且 $ mn > 0, \therefore m > 0, n > 0 \vee m < 0, n < 0$ 
+
+当 $m > 0, n > 0$ 时候，$(a_n)_{n = 0}^\infty$ 为正远离0的。
+
+当 $m < 0, n < 0$ 时候，$(a_n)_{n = 0}^\infty$ 为负远离0的。
+
+得证。
+
+若 $x , y$ 为正的，那么 $x \geq c_1, y \geq c_2,c_1 > 0, c_2 > 0, x + y \geq c_1 + c_2 > 0$
+
+$xy \geq c_1c_2 > 0$ 得证。
+
+
+
+**5.4.2**
+
+**证明：**
+
+1. 令 $z = x - y$, 由5.4.4可得：$z > 0, z = 0, z < 0$ 三者必取其一，即 $x > y, x = y, x < y$ 三者必取其一。
+2. $y - x = z > 0, -z < 0, x - y = -z < 0 \Rightarrow  y > x$
+3. $y - x = z_1 > 0, z - y = z_2 > 0, z_1 + z_2 > 0, z - x > 0, z > x$
+4. $y - x = a > 0, (y + z) - (x + z) = y - x = a > 0 \Rightarrow y + z > x + z$
+
+
+
+**5.4.3**
+
+**证明：**
+
+令 $x = LIM_{n \rightarrow \infty}b_n$
+
+由4.4.1可得，$N \leq b_n < N+ 1$
+
+设 $b_n = a_n + N$
+
+$\exists N' \in \Q, n > N', 0 \leq a_n < 1$
+
+根据5.4.1，$LIM_{n \rightarrow \infty} a_n$ 有两种状态，即正远离0与等于0。
+
+分别可得出来，$N < x < N + 1 \vee  x = N$
+
+可得 $\exists N \in \Q, N \leq x < N$
+
+
+
+**5.4.4**
+
+**证明：**
+
+$\exists n, n = x^{-1}, xn = 1$ 令 $N = \lfloor n \rfloor + 1$
+
+$n < N, xN > 1, x > 1/N$
+
+
+
+**5.4.5**
+
+**证明：**
+
+设 $z = y - x > 0$
+
+则必然 $\exists N, z > 1/N > 0$
+
+$n \leq xN < n + 1, \frac{n}{N} \leq x < \frac{n + 1}{N}$
+
+$y - x > 1/N, y > x + 1/N \geq \frac{n + 1}{N} > x$ 得证。
+
+
+
+**5.4.6**
+
+**证明：**
+
+$y - \varepsilon < x < y + \varepsilon \Rightarrow y - x < \varepsilon \wedge x - y < \varepsilon \Rightarrow  |x - y| < \varepsilon$
+
+$|x - y| < \varepsilon \Rightarrow -\varepsilon < x - y < \epsilon  \Rightarrow y - \varepsilon < x < y + \varepsilon$
+
+$|x - y| = \varepsilon \Leftrightarrow -\varepsilon = x - y \vee x - y = \varepsilon$
+
+$\Leftrightarrow x = y - \varepsilon \vee x = y + \varepsilon$ 得证。
+
+
+
+**5.4.7**
+
+**证明：**
+
+1. 假设 $x > y$ 那么 $x - y = z > 0, x - y > z/2$ 与题设矛盾。
+
+2. 当 $x = y$ 时，显然 $|x - y| \leq \varepsilon , \forall \varepsilon > 0$ 成立。
+
+   由 $|x - y| \leq \varepsilon ,\forall \varepsilon \in \R$  成立。$x - y \leq \varepsilon, y - x \leq \varepsilon \Rightarrow x \leq y + \varepsilon, y \leq x + \varepsilon$
+
+   $x \leq y, y \leq x, x = y$ 得证。
+
+
+
+**5.4.8**
+
+**证明：**
+
+1. 假设 $LIM_{n \rightarrow \infty} a_n > x$  设 $b_n = a_n - x$
+
+   由假设得：$LIM_{n \rightarrow \infty} b_n$ 为正远离0得，
+
+   那么必然存在 $n', b_{n'} > 0, b_{n'} = a_{n'} - x > 0, a_{n'} > x$ 与题设相反，得证。
+
+2. 证法同上。
+
 
 
 
