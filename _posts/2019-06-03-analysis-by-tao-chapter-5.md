@@ -278,23 +278,71 @@ $\Leftrightarrow x = y - \varepsilon \vee x = y + \varepsilon$ 得证。
 
 
 
+## 最小上界性质
+
+**5.5.1**
+
+**证明：**
+
+$\because M = sup(E), \forall x \in E, M > x \Rightarrow \forall x \in E, -M < -x$
+
+所以 $-M$ 是 $-E$ 的下界。
+
+假设 $A$ 是一个 $-E$ 的下界。并且 $A > -M$ 
+
+$(-x \in -E) \Rightarrow -x \geq A \Rightarrow x \leq -A$
+
+$\therefore A > -M, -A < M$ 与 $M$ 是最小上界矛盾，所以 $A \leq -M$
 
 
 
+**5.5.2**
+
+**证明：**
+
+假设不存在这样的整数 $L$ 和 $K$, 也就是对于 $L < m \leq K$ 要么 $m/n, (m - 1)/n$ 都是 $E$ 的上界，要不都是不是 $E$ 的上界。
+
+先证都不是上界的情况。
+
+当 $m = L + 1$ 的时候，$[(m  + 1) -1] / n, (m + 1)/ n$ 都不是 $E$ 的上界，
+
+利用数学归纳法 $m = L + 2, L + 3…. \infty$ 的时候，没有 $L' > m$ 使得 $L < m \leq K， L/n$ 为上界不成立。
+
+在证都不是下界的情况。
+
+当 $m = K，\forall x \in E, m/n > x \Rightarrow (m - 1)/n$ 也成立。
+
+利用数学归纳法，可证明不存在 $K, L < m \leq K， K/n < x, \forall x \in E$。证明成立。
 
 
 
+**5.5.3**
+
+**证明：**
+
+由 5.5.9，必然有一个最小上界 $M$ 则存在一个 $N$ 使得 $N + 1 < M \leq N, N + 1$ 是 $E$ 的上界，$N$ 是 $E$ 的下界。假设存在 $N', N'+1$ 是 $E$ 的上界，$N \neq N'$ 此时可得 $N' + 1 < M \leq N'$ 
+
+同时由 习题 5.4.3,可得 $N = N'$
 
 
 
+**5.5.4**
 
+**证明：**
 
+$\forall \varepsilon > 0, \exists N, N > 1/\varepsilon, 1/N < \varepsilon$
 
+当 $n, n' > N$时，$|q_n - q_{n'}| \leq 1/N < \varepsilon$ 得证。
 
+$S = \{q_M\}_{n \rightarrow \infty}$
 
+$|q_m - S|$ 也是一个柯西序列。
 
+可以柯西序列去掉前面有限项之后得到的序列是与原序列等价的。
 
+所以设 $p_n = |q_M - S|$ 那么 $|q_M - S| = \{p_n\}_{n \rightarrow \infty}$
 
+对任意的正整数n，都有 $p_n \leq 1/M$ 得证。
 
 
 
